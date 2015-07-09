@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="SecureMail.jnlp">
+  <information>
+    <title>SecureMail</title>
+    <vendor>Hochmoa</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <jfx:javafx-runtime version="2.2+" href="http://javadl.sun.com/webapps/download/GetFile/javafx-latest/windows-i586/javafx2.jnlp"/>
+  </resources>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="SecureMail.jar" size="44051" download="eager" />
+    <jar href="lib/activation.jar" size="56290" download="eager" />
+    <jar href="lib/javax.mail.jar" size="582024" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="SecureMail" >
+    <param name="requiredFXVersion" value="2.2+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="securemail.SecureMail"  name="SecureMail" />
+  <update check="always"/>
+</jnlp>
