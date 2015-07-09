@@ -572,23 +572,19 @@ private String getText(Part p) throws
         Label labTo=new Label("Sent by: "+le.sender);
         
         Label date=new Label(le.date);
-        labTo.setMinWidth(windowX-sideBarWidth*3);
-        labTo.setMaxWidth(windowX-sideBarWidth*3);
+        
         WebView browser = new WebView();
         WebEngine webEngine = browser.getEngine();
 
         ScrollPane scrollPane = new ScrollPane();
         scrollPane.setContent(browser);
         webEngine.loadContent(le.message);
-        
+ 
         root.getChildren().addAll(scrollPane);
-        
-        scrollPane.maxWidth(windowX-sideBarWidth-xOffset*10);
-        scrollPane.prefHeight(windowY-menuBarHeight-blueButtonHeight);
         HBox hBox=new HBox();
         VBox vBox=new VBox();
         hBox.getChildren().add(labTo);
-        hBox.getChildren().add(date);
+        //hBox.getChildren().add(date);
         vBox.getChildren().add(hBox);
         vBox.getChildren().add(scrollPane);
         emailDetails.getChildren().add(vBox);
@@ -596,7 +592,6 @@ private String getText(Part p) throws
         scrollPane.setLayoutY(blueButtonHeight);
         emailDetails.setLayoutX(sideBarWidth+separatorStrokeWidth);
         emailDetails.setLayoutY(menuBarHeight+blueButtonHeight);
-       
     }
 
     private void showList(Pane root) {
